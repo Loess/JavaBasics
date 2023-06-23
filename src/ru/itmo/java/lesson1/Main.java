@@ -39,16 +39,14 @@ public class Main {
         System.out.println(x1 + "\n" + x2 + "\n" + x3);
 
         //1.6
-        for (int i = 1; i <= 6; i++) {
-            System.out.println("Input 1 integer for b variable:");
-            int b = scanner.nextInt();
-            if (b % 2 != 0){
-                System.out.println("Нечётное");
-            } else if (b > 100) {
-                System.out.println("Выход за пределы диапазона");
-            } else {
-                System.out.println("Чётное");
-            }
+        System.out.println("Input 1 integer for b variable:");
+        int b = scanner.nextInt();
+        if (b % 2 != 0){
+            System.out.println("Нечётное");
+        } else if (b > 100) {
+            System.out.println("Выход за пределы диапазона");
+        } else {
+            System.out.println("Чётное");
         }
     }
 }
