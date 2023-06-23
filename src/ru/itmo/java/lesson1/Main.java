@@ -21,14 +21,13 @@ public class Main {
 
         //1.3
         int number = 10500;
-        int result;
-        result=(number / 10) / 10;
+        double result;
+        result=((double)number / 10) / 10;
         System.out.println(result);
 
         //1.4
-        double result2;
-        result2 = 3.6 * 4.1 * 5.9;
-        System.out.println(result2);
+        result = (3.6 * 4.1 * 5.9);
+        System.out.println(result);
 
         //1.5
         Scanner scanner = new Scanner(System.in);
