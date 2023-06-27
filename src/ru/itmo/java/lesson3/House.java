@@ -12,7 +12,8 @@ public class House {
         this.yearOfBuild = yearOfBuild;
         this.name = name;
     }
-    public int showAge(){
+
+    public int showAge() {
         return Year.now().getValue() - this.yearOfBuild;
     }
 
@@ -30,9 +31,9 @@ class JavaProgram3 {
     public static void main(String[] args) {
         House scilla = new House();
         House noble = new House();
-        scilla.setParams(10,1987,"Scilla");
+        scilla.setParams(10, 1987, "Scilla");
         System.out.println(scilla);
-        noble.setParams(3,1965,"Noble");
+        noble.setParams(3, 1965, "Noble");
         System.out.println(noble);
         System.out.println(noble.showAge());
 

@@ -10,13 +10,16 @@ public class ColorNameWeight {
         this.name = name;
         this.weight = weight;
     }
+
     public ColorNameWeight(String color) {
         this.color = color;
     }
+
     public ColorNameWeight(String color, int weight) {
         this.color = color;
         this.weight = weight;
     }
+
     public ColorNameWeight() {
 
     }
@@ -33,8 +36,8 @@ public class ColorNameWeight {
 
 class JavaProgram2 {
     public static void main(String[] args) {
-        ColorNameWeight obj1 = new ColorNameWeight("funny","object1",10);
-        ColorNameWeight obj2 = new ColorNameWeight("white",10);
+        ColorNameWeight obj1 = new ColorNameWeight("funny", "object1", 10);
+        ColorNameWeight obj2 = new ColorNameWeight("white", 10);
         System.out.println(obj1);
         obj1.color = "not funny";
         System.out.println(obj1);
