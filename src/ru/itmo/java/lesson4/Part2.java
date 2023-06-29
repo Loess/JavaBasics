@@ -32,21 +32,24 @@ public class Part2 {
         return array;
     }
 
+    /**
+     *
+     * @param array of int
+     * @return unique int in array, null if not found
+     */
     public static Integer findUnique(int[] array) {
         int arrayLen = array.length;
         for (int i = 0; i < arrayLen; i++) {
             boolean isUnique = false;
             for (int j = 0; j < arrayLen; j++) {
                 isUnique = false;
-                System.out.print((array[i] + " " + array[j] + "="));
-                System.out.print(("!" + i + " " + j + "!"));
                 if (array[i] == array[j] && i != j) {
                     break;
                 } else {
                     isUnique = true;
                 }
             }
-            System.out.println("!" + isUnique);
+
             if (isUnique) {
                 return array[i];
             }
