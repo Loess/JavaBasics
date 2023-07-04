@@ -6,7 +6,7 @@ public class Main {
         String a = "Если б мишки были пчёлами, то они бэ нипачём никогда и не подумали так высоко строить дом, бяка";
         System.out.println(getLongestWord(a));
         //2.	Написать метод, который проверяет является ли слово палиндромом.
-        String b = "lol";
+        String b = "Lol";
         System.out.println(isPalyndrome(b));
         //3.	Напишите метод, заменяющий в тексте все вхождения слова «бяка» на «[вырезано цензурой]».
         System.out.println(replacer(a, "бяка", "[вырезано цензурой]"));
@@ -29,8 +29,8 @@ public class Main {
     }
 
     private static boolean isPalyndrome(String a) {
-        StringBuilder s = new StringBuilder(a);
-        if (a.equals(s.reverse().toString())) {
+        StringBuilder s = new StringBuilder(a.toLowerCase());
+        if (a.toLowerCase().equals(s.reverse().toString())) {
             return true;
         }
         return false;
