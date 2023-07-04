@@ -1,7 +1,5 @@
 package ru.itmo.java.lesson5;
 
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         //1.	Написать метод для поиска самого длинного слова в тексте.
