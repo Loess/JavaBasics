@@ -1,7 +1,6 @@
 package ru.itmo.java.lesson6;
 
 
-
 public class ChildClass extends MainClass {
     private String name;
 
@@ -13,7 +12,7 @@ public class ChildClass extends MainClass {
 
     //●	переопределенный метод для получения имени пользователя;
     @Override
-    public void setUserInfo(){
+    public void setUserInfo() {
         super.setUserInfo();
         System.out.println("Введите имя:");
         this.name = this.scanner.next();
