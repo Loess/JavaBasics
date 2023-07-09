@@ -14,8 +14,7 @@ public class ChildClass extends MainClass {
     //●	переопределенный метод для получения имени пользователя;
     @Override
     public void setUserInfo(){
-        System.out.println("Введите возраст:");
-        this.age = this.scanner.nextInt();
+        super.setUserInfo();
         System.out.println("Введите имя:");
         this.name = this.scanner.next();
     }
