@@ -15,7 +15,7 @@ public class Main {
         long mstime = System.currentTimeMillis();
         get100kElements(arraylist);
         System.out.println(System.currentTimeMillis() - mstime + " ms"); //14 ms
-        //get100kElements(linkedlist);
+        get100kElements(linkedlist);
         System.out.println(System.currentTimeMillis() - mstime + " ms"); //133378 ms
 
         //4
