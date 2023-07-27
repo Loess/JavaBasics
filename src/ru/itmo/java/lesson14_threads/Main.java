@@ -1,6 +1,7 @@
 package ru.itmo.java.lesson14_threads;
 
 import java.util.ArrayList;
+import java.util.concurrent.CountDownLatch;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
@@ -21,8 +22,8 @@ public class Main {
 //Напишите программу, в которой запускается 100 потоков, каждый из которых вызывает метод increment() 1000 раз.
 //После того, как потоки завершат работу count должен быть равен 100000 при  каждом запуске программы .
 //Если обнаружилась проблема, предложите ее решение.
-        ArrayList<Thread> arraylist = new ArrayList();
         Counter counter = new Counter();
+        CountDownLatch latch = new CountDownLatch(100*1000);
         for (int i = 0; i < 100; i++) {
             Thread thread = new Thread() {
                 @Override
@@ -30,17 +31,15 @@ public class Main {
                     synchronized (counter) {
                         for (int j = 0; j < 1000; j++) {
                             counter.increment();
+                            latch.countDown();
                         }
                     }
                     System.out.println(counter.getCount() + " at the end of " + this.getName());
                 }
             };
             thread.start();
-            arraylist.add(thread);
         }
-        for (Thread thread : arraylist) {
-            thread.join();
-        }
+        latch.await();
         System.out.println(counter.getCount());
 
 //● Напишите программу, в которой создаются два потока, каждый из которых выводит
